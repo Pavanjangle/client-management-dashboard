@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 const Login = () => {
   const form = useForm({
     initialValues: {
-      email: "pjangale88@gmail.com",
-      password: "12345678",
+      email: "",
+      password: "",
     },
   });
 
