@@ -30,7 +30,7 @@ const Signup = () => {
       p="md"
       shadow="md"
       radius="md"
-      withBorder={{ maxwidth: 400, margin: "auto", marginTop: "100" }}
+      withBorder style={{ maxwidth: 400, margin: "auto", marginTop: "100" }}
     >
       <Title align="center" mb="md">
         SignUp
