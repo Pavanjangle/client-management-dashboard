@@ -31,13 +31,13 @@ const Login = () => {
         "http://localhost:5000/api/auth/login",
         values
       );
-
+      
       console.log("Login successful:", res.data);
       localStorage.setItem("token", res.data.token);
       navigate("/dashboard");
       alert("Login successful!");
     } catch (err) {
-      console.error("Login error:", err); // ✅ don't use `res` here
+      console.error("Login error:", err); 
       alert(err?.response?.data?.msg || "Login failed");
     }
   };
@@ -60,11 +60,12 @@ const Login = () => {
         p="xl"
         radius="md"
         style={{
-          width: 400,
+          width: 450,
           backdropFilter: "blur(10px)",
           backgroundColor: "rgba(255, 255, 255, 0.1)",
           color: "#fff",
-          border: "1px solid rgba(255, 255, 255, 0.3)",
+          border: "3px solid rgba(255, 255, 255, 0.3)",
+          margin: "10px",
         }}
       >
         <Title align="center" order={2} style={{ color: "#fff" }} mb="lg">
