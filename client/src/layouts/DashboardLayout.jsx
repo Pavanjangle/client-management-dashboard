@@ -1,17 +1,15 @@
-import { Container, Grid } from '@mantine/core';
-import Header from '../components/Header';
-import Sidebar from '../components/Sidebar';
+import React from 'react';
+import CustomSidebar from '../components/Sidebar/CustomSidebar';
+import CustomHeader from '../components/Header/CustomHeader';
 
 const DashboardLayout = ({ children }) => (
-  <Grid>
-    <Grid.Col span={2}>
-      <Sidebar />
-    </Grid.Col>
-    <Grid.Col span={10}>
-      <Header />
-      <Container>{children}</Container>
-    </Grid.Col>
-  </Grid>
+  <div className="d-flex">
+    <CustomSidebar />
+    <div className="flex-grow-1 p-3" style={{ backgroundColor: '#f4f4fc' }}>
+      <CustomHeader />
+      {children}
+    </div>
+  </div>
 );
 
 export default DashboardLayout;

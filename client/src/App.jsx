@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import ProtectedRoute from "./components/ProtectedRoute";
+// import ProtectedRoute from "./components/ProtectedRoute";
 import Dashboard from "./pages/Dashboard";
 
 
@@ -14,9 +14,9 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard"
          element={
-         <ProtectedRoute>
+        //  <ProtectedRoute>
             <Dashboard />
-            </ProtectedRoute>
+            // </ProtectedRoute>
          }
       />
 
