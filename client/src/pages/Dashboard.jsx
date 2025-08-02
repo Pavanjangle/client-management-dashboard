@@ -7,13 +7,13 @@ import { DollarSign, Users, ShoppingBag, Eye } from 'lucide-react';
 
 const Dashboard = () => (
   <DashboardLayout>
-    <h2 className="mb-4">Dashboard</h2>
+    <h2 className="mb-4">Client Management Dashboard</h2>
     <div className="row g-4">
       <div className="col-md-3">
         <StatCard icon={<DollarSign />} label="Total Revenue" value="$587,684.81" growth="+10.5%" />
       </div>
       <div className="col-md-3">
-        <StatCard icon={<Users />} label="Total Customer" value="164,540" growth="-0.5%" />
+        <StatCard icon={<Users />} label="Total Clients" value="164,540" growth="-0.5%" />
       </div>
       <div className="col-md-3">
         <StatCard icon={<ShoppingBag />} label="Total Transaction" value="256,560" growth="+5.5%" />

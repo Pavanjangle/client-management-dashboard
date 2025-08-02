@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './global.css'
 import App from './App.jsx'
 import { MantineProvider } from '@mantine/core';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 createRoot(document.getElementById('root')).render(
