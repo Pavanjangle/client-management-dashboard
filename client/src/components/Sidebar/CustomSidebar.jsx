@@ -11,7 +11,7 @@ const menu = [
 
 const CustomSidebar = () => (
   <div className="p-3 bg-dark text-white" style={{ width: 250, minHeight: '100vh' }}>
-    <h4 className="mb-4">Services</h4>
+    <h4 className="mb-4">Service</h4>
     <ul className="list-unstyled">
       {menu.map((item, i) => (
         <li key={i} className="mb-3 d-flex align-items-center">
