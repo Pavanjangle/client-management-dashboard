@@ -2,7 +2,7 @@ import { Home, ShoppingCart, Users, BarChart, Volume2 } from 'lucide-react';
 
 const menu = [
   { icon: <Home size={18} />, label: 'Overview' },
-  { icon: <ShoppingCart size={18} />, label: 'Product' },
+  { icon: <ShoppingCart size={18} />, label: 'Products' },
   { icon: <Users size={18} />, label: 'Customer' },
   { icon: <BarChart size={18} />, label: 'Statistics' },
   { icon: <Volume2 size={18} />, label: 'Campaign' },
