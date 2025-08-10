@@ -3,3 +3,55 @@ body {
   padding: 0;
    font-family: "Montserrat", sans-serif;
 }
+
+/* Upgrade Modal Styles */
+.modal-overlay {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+  animation: slideIn 0.3s ease-out;
+}
+
+.plan-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.plan-card.selected {
+  border-color: #007bff !important;
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.2) !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .plan-card {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+}

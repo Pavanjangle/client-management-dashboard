@@ -1,5 +1,6 @@
 import { Home, ShoppingCart, Users, BarChart, Volume2, ChevronRight } from 'lucide-react';
 import { useState, useRef } from 'react';
+import UpgradeModal from '../Modal/UpgradeModal';
 
 const menu = [
   { 
@@ -61,6 +62,7 @@ const menu = [
 const CustomSidebar = () => {
   const [hoveredItem, setHoveredItem] = useState(null);
   const [isDropdownHovered, setIsDropdownHovered] = useState(false);
+  const [isUpgradeModalOpen, setIsUpgradeModalOpen] = useState(false);
   const timeoutRef = useRef(null);
 
   const handleMouseEnter = (index) => {
@@ -179,8 +181,29 @@ const CustomSidebar = () => {
         ))}
       </ul>
       <div className="mt-auto">
-        <button className="btn btn-primary w-100">Upgrade</button>
+        <button 
+          className="btn btn-primary w-100" 
+          onClick={() => setIsUpgradeModalOpen(true)}
+          style={{
+            backgroundColor: '#007bff',
+            border: 'none',
+            padding: '12px',
+            borderRadius: '8px',
+            fontWeight: '600',
+            transition: 'all 0.3s ease'
+          }}
+          onMouseEnter={(e) => e.target.style.backgroundColor = '#0056b3'}
+          onMouseLeave={(e) => e.target.style.backgroundColor = '#007bff'}
+        >
+          Upgrade
+        </button>
       </div>
+      
+      {/* Upgrade Modal */}
+      <UpgradeModal 
+        isOpen={isUpgradeModalOpen} 
+        onClose={() => setIsUpgradeModalOpen(false)} 
+      />
     </div>
   );
 };
